@@ -1,6 +1,6 @@
 # Посмотри в окно
 
-**GitHub:** [Посмотреть исходный код проекта]**GitHub:** [https://github.com/nvrmr05/ono-tebe-nado-fd](https://github.com/nvrmr05/posmotri-v-okno-fd)
+GitHub: [Посмотреть исходный код проекта](https://github.com/nvrmr05/posmotri-v-okno-fd)
 
 Веб-приложение для поиска и просмотра видео из разных городов. Пользователь может выбрать город и время суток, чтобы найти подходящие видеозаписи.
 
