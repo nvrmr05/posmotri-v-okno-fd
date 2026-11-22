@@ -3,28 +3,29 @@
 *::after {
   box-sizing: border-box;
 }
-
+ 
 html {
   block-size: 100%;
 }
-
+ 
 body {
+  min-block-size: 100%;
   margin: 0;
 }
-
+ 
 .page {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  min-height: 100vh;
-  margin: 0;
+  inline-size: 1200px;
+  block-size: 100%;
+  margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
-
+ 
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -34,7 +35,7 @@ body {
   white-space: nowrap;
   clip-path: inset(50%);
 }
-
+ 
 h1,
 h2,
 h3,
@@ -48,28 +49,28 @@ fieldset {
   margin: 0;
   padding: 0;
 }
-
+ 
 ul,
 ol {
   list-style: none;
 }
-
+ 
 /* Кастомный скроллбар */
-
+ 
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
-
+ 
 .custom-scrollbar::-webkit-scrollbar-track {
   background: rgb(217 217 217 / 10%);
 }
-
+ 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
 }
-
+ 
 /* Основная структура */
-
+ 
 .content {
   display: flex;
   align-items: flex-end;
@@ -78,7 +79,7 @@ ol {
   height: 534px;
   margin: auto;
 }
-
+ 
 .content__details {
   display: flex;
   flex-direction: column;
@@ -86,78 +87,83 @@ ol {
   height: 100%;
   gap: 26px;
 }
-
+ 
 /* Видеоплеер */
-
+ 
 .result__video-container {
   position: relative;
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
 }
-
+ 
 .result__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-
+ 
 /* Список карточек */
-
+ 
 .content__list-container {
   flex-grow: 1;
   min-height: 0;
+  padding-bottom: 1px;
   overflow-y: auto;
 }
+ 
 .content__list {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-
+ 
 /* Карточки видео */
-
+ 
 .content__list-item {
   width: 100%;
 }
-
+ 
 .content__card-link {
   display: block;
   width: 100%;
   color: #fff;
   text-decoration: none;
 }
-
+ 
 .content__video-card {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 10px;
 }
-
+ 
 .content__video-card-description-container {
   flex-grow: 1;
   min-width: 0;
 }
-
+ 
 .content__video-card-title {
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
+  overflow: hidden;
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.25;
   text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-
+ 
 .content__video-card-description {
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.1;
 }
-
+ 
 .content__video-card-thumbnail {
   display: block;
   width: 194px;
@@ -166,62 +172,60 @@ ol {
   object-fit: cover;
   object-position: center;
 }
-
+ 
 /* Состояния карточек */
-
+ 
 .content__card-link:hover {
   background-color: #545050;
 }
-
+ 
 .content__card-link_current {
   background-color: #545050;
 }
-
+ 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
-
+ 
 .content__card-link:active {
   background-color: #1b1919;
 }
-
-
+ 
 /* Главный заголовок */
-
+ 
 .title {
   max-width: 400px;
   color: #fff;
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
-  line-height: 0.94;
+  line-height: 70px;
   text-transform: uppercase;
 }
-
+ 
 /* Акцентная часть заголовка */
-
+ 
 .content__accent {
   color: #545050;
 }
-
-
+ 
 /* Форма поиска */
-
+ 
 .search-form {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 20px;
 }
-
+ 
 .search-form__fieldset {
   display: flex;
   flex-direction: column;
   gap: 5px;
   border: none;
 }
-
+ 
 .search-form__fieldset-title {
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -229,22 +233,22 @@ ol {
   font-weight: 400;
   line-height: 1.2;
 }
-
+ 
 .search-form__label {
   display: flex;
   align-items: center;
   gap: 5px;
   cursor: pointer;
 }
-
+ 
 .search-form__label-text {
   color: #fff;
   font-size: 18px;
   line-height: 1.2;
 }
-
+ 
 /* Поле ввода города */
-
+ 
 .search-form__textfield {
   width: 225px;
   padding: 2px 0;
@@ -257,25 +261,25 @@ ol {
   border-bottom: 1px solid #fff;
   outline: none;
 }
-
+ 
 .search-form__textfield::placeholder {
   color: rgb(255 255 255 / 70%);
   opacity: 1;
 }
-
+ 
 .search-form__textfield:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
-
+ 
 /* Чекбоксы */
-
+ 
 .search-form__checkbox-list {
   display: flex;
   align-items: center;
   gap: 15px;
 }
-
+ 
 .search-form__pseudo-checkbox {
   width: 19px;
   height: 19px;
@@ -283,21 +287,32 @@ ol {
   flex-shrink: 0;
   position: relative;
 }
-
+ 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: '';
   position: absolute;
   inset: 3px;
   background-color: #fff;
 }
-
+ 
 .search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
-
+ 
 /* Кнопка */
-
+ 
+.search-form .button {
+  align-self: flex-end;
+  width: 194px;
+}
+ 
+.content__list-container .button {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+}
+ 
 .button {
   padding: 6px 20px;
   color: #fff;
@@ -308,19 +323,21 @@ ol {
   border: 1px solid #fff;
   cursor: pointer;
 }
-
+ 
 .button:hover {
   background-color: #545050;
 }
-
+ 
 .button:active {
   background-color: #1b1919;
 }
-
+ 
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
+
+
 
 
 
