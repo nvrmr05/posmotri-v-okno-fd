@@ -1,6 +1,4 @@
-
 /* Базовые стили */
-
 *,
 *::before,
 *::after {
@@ -83,7 +81,6 @@ ol {
   align-items: flex-end;
   gap: 30px;
   width: 1140px;
-  height: 534px;
   margin: auto;
 }
 
@@ -93,6 +90,7 @@ ol {
   flex-grow: 1;
   height: 100%;
   gap: 26px;
+  max-width: 399px;
 }
 
 /* Видеоплеер */
@@ -117,6 +115,7 @@ ol {
   position: relative;
   flex-grow: 1;
   min-height: 0;
+  max-height: 298px;
   padding-bottom: 1px;
   overflow-y: auto;
 }
@@ -148,6 +147,8 @@ ol {
 }
 
 .content__video-card-description-container {
+  overflow: hidden;
+  flex-basis: 0;
   flex-grow: 1;
   min-width: 0;
 }
@@ -155,7 +156,7 @@ ol {
 .content__video-card-title {
   color: #fff;
   overflow: hidden;
-  font-family: Oswald, sans-serif;
+  font-family: inherit;
   font-size: 30px;
   font-weight: 700;
   line-height: 1.25;
@@ -236,7 +237,7 @@ ol {
 
 .search-form__fieldset-title {
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
@@ -255,13 +256,17 @@ ol {
   line-height: 1.2;
 }
 
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
+
 /* Поле ввода */
 
 .search-form__textfield {
   width: 225px;
   padding: 2px 0;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: inherit;
   font-size: 18px;
   background-color: transparent;
   border: none;
@@ -321,7 +326,7 @@ ol {
 .button {
   padding: 6px 20px;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   background-color: transparent;
@@ -341,12 +346,3 @@ ol {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
-
-
-
-
-
-
-
-
-
