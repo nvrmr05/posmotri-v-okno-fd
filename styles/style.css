@@ -1,3 +1,6 @@
+
+/* Базовые стили */
+
 *,
 *::before,
 *::after {
@@ -26,6 +29,8 @@ body {
   background-color: #1b1919;
 }
 
+/* Скрытые элементы */
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -35,6 +40,8 @@ body {
   white-space: nowrap;
   clip-path: inset(50%);
 }
+
+/* Сброс стандартных стилей */
 
 h1,
 h2,
@@ -55,7 +62,7 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
+/* Скроллбар */
 
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -120,7 +127,7 @@ ol {
   gap: 30px;
 }
 
-/* Карточки видео */
+/* Карточки */
 
 .content__list-item {
   width: 100%;
@@ -193,7 +200,7 @@ ol {
   background-color: #1b1919;
 }
 
-/* Главный заголовок */
+/* Заголовок */
 
 .title {
   max-width: 400px;
@@ -205,7 +212,7 @@ ol {
   text-transform: uppercase;
 }
 
-/* Акцентная часть заголовка */
+/* Акцент заголовка */
 
 .content__accent {
   color: #545050;
@@ -248,7 +255,7 @@ ol {
   line-height: 1.2;
 }
 
-/* Поле ввода города */
+/* Поле ввода */
 
 .search-form__textfield {
   width: 225px;
@@ -298,7 +305,7 @@ ol {
   outline-offset: 2px;
 }
 
-/* Кнопка */
+/* Кнопки */
 
 .search-form .button {
   align-self: flex-end;
@@ -334,6 +341,7 @@ ol {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
+
 
 
 
